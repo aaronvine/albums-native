@@ -1,9 +1,13 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import RecipeDetail from './RecipeDetail';
 
 export default class RecipeList extends React.Component {
-  state = { recipes: [] };
+
+  state = {
+    recipes: []
+  };
 
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums').then(res => {
@@ -12,7 +16,7 @@ export default class RecipeList extends React.Component {
   }
 
   renderRecipes() {
-    return this.state.recipes.map(recipe => <Text key={recipe.title}>{recipe.title}</Text>);
+    return this.state.recipes.map(recipe => <RecipeDetail key={recipe.title} recipe={recipe} />);
   }
 
   render() {
