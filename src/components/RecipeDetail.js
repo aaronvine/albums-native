@@ -1,10 +1,14 @@
 import React, { PropTypes } from 'react';
-import { Text, View } from 'react-native';
+import { Text } from 'react-native';
+import Card from './Card';
+import CardSection from './CardSection';
 
 const RecipeDetail = (props) => (
-  <View>
-    <Text>{props.recipe.title}</Text>
-  </View>
+  <Card>
+    <CardSection>
+      <Text>{props.recipe.title}</Text>
+    </CardSection>
+  </Card>
 );
 
 RecipeDetail.propTypes = {
