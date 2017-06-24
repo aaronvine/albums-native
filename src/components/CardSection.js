@@ -20,7 +20,7 @@ const CardSection = (props) => (
 );
 
 CardSection.propTypes = {
-  children: PropTypes.element.isRequired,
+  children: PropTypes.node,
 };
 
 export default CardSection;
