@@ -60,7 +60,7 @@ const RecipeDetail = ({ recipe }) => {
         />
       </CardSection>
       <CardSection>
-        <Button />
+        <Button onPress={() => console.log(title)} />
       </CardSection>
     </Card>
   );
