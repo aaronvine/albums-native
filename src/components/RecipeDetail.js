@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './Card';
 import CardSection from './CardSection';
+import Button from './Button';
 
 const styles = {
   headerContentStyle: {
@@ -57,6 +58,9 @@ const RecipeDetail = ({ recipe }) => {
           source={{ uri: image }}
           style={imageStyle}
         />
+      </CardSection>
+      <CardSection>
+        <Button />
       </CardSection>
     </Card>
   );
